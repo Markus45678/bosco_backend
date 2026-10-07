@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Додати новий товар{% endblock %}
+
+{% block content %}
+<h2>Додавання нового товару</h2>
+
+<form method="post" action="{% url 'product_add' %}" class="product-form">
+    {% csrf_token %}
+
+    <div class="form-group">
+        <label for="name">Назва товару:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="quantity">Кількість:</label>
+        <input type="number" id="quantity" name="quantity" min="0" value="0" required>
+    </div>
+
+    <div class="form-group">
+        <label for="price">Ціна (грн):</label>
+        <input type="number" id="price" name="price" step="0.01" min="0" required>
+    </div>
+
+    <button type="submit" class="btn-submit">Зберегти товар</button>
+</form>
+{% endblock %}
