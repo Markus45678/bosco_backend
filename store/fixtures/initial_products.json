@@ -1,0 +1,12 @@
+[
+  {"model": "products.product", "pk": 1, "fields": {"name": "Сир Твердий", "category": "Молочні продукти", "weight_grams": 350, "expiry_date": "2026-11-15", "price": "145.50"}},
+  {"model": "products.product", "pk": 2, "fields": {"name": "Молоко 2.5%", "category": "Молочні продукти", "weight_grams": 900, "expiry_date": "2026-10-20", "price": "42.00"}},
+  {"model": "products.product", "pk": 3, "fields": {"name": "Шоколад Чорний", "category": "Солодощі", "weight_grams": 90, "expiry_date": "2027-05-10", "price": "65.00"}},
+  {"model": "products.product", "pk": 4, "fields": {"name": "Масло Вершкове", "category": "Молочні продукти", "weight_grams": 200, "expiry_date": "2026-12-01", "price": "88.50"}},
+  {"model": "products.product", "pk": 5, "fields": {"name": "Йогурт Полуничний", "category": "Молочні продукти", "weight_grams": 280, "expiry_date": "2026-10-25", "price": "34.00"}},
+  {"model": "products.product", "pk": 6, "fields": {"name": "Шоколад Молочний", "category": "Солодощі", "weight_grams": 100, "expiry_date": "2027-04-15", "price": "58.00"}},
+  {"model": "products.product", "pk": 7, "fields": {"name": "Хліб Духмяний", "category": "Випічка", "weight_grams": 500, "expiry_date": "2026-10-12", "price": "24.00"}},
+  {"model": "products.product", "pk": 8, "fields": {"name": "Сир Домашній", "category": "Молочні продукти", "weight_grams": 400, "expiry_date": "2026-10-18", "price": "95.00"}},
+  {"model": "products.product", "pk": 9, "fields": {"name": "Печиво Вівсяне", "category": "Солодощі", "weight_grams": 300, "expiry_date": "2027-01-30", "price": "45.00"}},
+  {"model": "products.product", "pk": 10, "fields": {"name": "Сок Яблучний", "category": "Напої", "weight_grams": 1000, "expiry_date": "2027-08-01", "price": "52.00"}}
+]
