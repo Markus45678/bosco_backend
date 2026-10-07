@@ -1,6 +1,5 @@
-{% load store_extras %}
 {% extends "base.html" %}
-
+{% load store_extras %}
 
 {% block title %}Список товарів{% endblock %}
 
@@ -12,7 +11,9 @@
         <tr>
             <th>ID</th>
             <th>Назва</th>
-            <th>Кількість</th>
+            <th>Категорія</th>
+            <th>Вага (г)</th>
+            <th>Термін придатності</th>
             <th>Ціна</th>
         </tr>
     </thead>
@@ -21,12 +22,14 @@
             <tr>
                 <td>{{ product.id }}</td>
                 <td>{{ product.name }}</td>
-                <td>{{ product.quantity }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.weight_grams }}</td>
+                <td>{{ product.expiry_date }}</td>
                 <td>{{ product.price|uah }}</td>
             </tr>
         {% empty %}
             <tr>
-                <td colspan="4" class="empty-msg">Товарів немає у базі даних.</td>
+                <td colspan="6" class="empty-msg">Товарів немає у базі даних.</td>
             </tr>
         {% endfor %}
     </tbody>

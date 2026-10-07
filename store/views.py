@@ -4,23 +4,27 @@ from .models import Product
 
 def product_list(request):
     products = Product.objects.all()
-    return render(request, 'inventory/products.html', {'products': products})
+    return render(request, 'store/products.html', {'products': products})
 
 def product_add(request):
     if request.method == 'POST':
         name = request.POST.get('name')
-        quantity = request.POST.get('quantity')
+        category = request.POST.get('category')
+        weight_grams = request.POST.get('weight_grams')
+        expiry_date = request.POST.get('expiry_date')
         price = request.POST.get('price')
 
-        if name and quantity and price:
+        if name and category and weight_grams and expiry_date and price:
             Product.objects.create(
                 name=name,
-                quantity=quantity,
+                category=category,
+                weight_grams=weight_grams,
+                expiry_date=expiry_date,
                 price=price
             )
             messages.success(request, f'Товар "{name}" успішно додано!')
-            return redirect('product_list')  # Post/Redirect/Get
+            return redirect('product_list')
         else:
             messages.error(request, 'Будь ласка, заповніть усі поля форми.')
 
-    return render(request, 'inventory/product_add.html')
+    return render(request, 'store/product_add.html')

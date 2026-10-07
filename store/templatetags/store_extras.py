@@ -1,6 +1,7 @@
 from store.models import Product
 from django import template
 
+
 register = template.Library()
 
 @register.filter(name='uah')
