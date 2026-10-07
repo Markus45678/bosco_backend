@@ -1,0 +1,8 @@
+{% load store_extras %}
+<nav class="main-nav">
+    <a href="{% url 'product_list' %}">Список товарів</a> |
+    <a href="{% url 'product_add' %}">Додати товар</a>
+    <span class="product-badge">
+        Товарів у базі: {% product_count %}
+    </span>
+</nav>
